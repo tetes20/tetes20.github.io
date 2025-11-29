@@ -332,3 +332,58 @@ ul li {
 .project-card p {
     font-size: 13px;
 }
+
+
+/* --- RESPONSIVENESS (MOBILE) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    /* Header */
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .header-content {
+        margin-left: 0;
+    }
+
+    .contact-section {
+        align-items: center; /* Wyśrodkowanie linków */
+    }
+
+    /* Główny układ - jedna kolumna */
+    .main-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-column, .right-column {
+        flex: auto;
+        max-width: 100%;
+    }
+
+    /* Projekty */
+    .project-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Na mobile obrazek zawsze pod tekstem lub nad tekstem - zależy od preferencji.
+       Tutaj standardowy flow: Najpierw tytuł/opis, potem zdjęcie */
+    .project-visual {
+        order: -1; /* Jeśli chcesz zdjęcie NAD opisem na telefonie, odkomentuj to */
+        width: 100%;
+    }
+    
+    .project-img {
+        max-width: 100%; /* Pełna szerokość na mobile */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Jedna kolumna dla małych projektów */
+    }
+}
