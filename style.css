@@ -1,30 +1,54 @@
+/* Zmienne dla kolorów - łatwiejsze zarządzanie */
+:root {
+    --bg-color: #e0dfdf;
+    --text-color: #2c2c2c;
+    --accent-color: #0073b1; /* Niebieski LinkedIn */
+    --link-color: #0077b5;
+    --border-color: #ccc;
+    --side-border-color: #c87f56; /* Brązowy akcent */
+    --date-color: #666;
+}
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    /*font-family: 'M*/
     font-family: 'Montserrat', sans-serif;
-    background-color: #e0dfdf;
-    color: #2c2c2c;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
-    padding: 40px;
+    /* Usunięto padding body, padding jest teraz w kontenerze */
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
 
-
+/* --- GLÓWNY KONTENER --- */
 .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #e0dfdf;
-            padding: 40px;
-        }
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--bg-color);
+    padding: 40px 20px; /* Zmniejszony padding boczny dla mobile */
+    overflow-x: hidden; /* Zapobiega poziomemu przewijaniu */
+}
 
+/* --- HEADER --- */
 header {
+    margin-bottom: 30px;
+}
+
+.header-inner {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap; /* Pozwala na zawijanie na małych ekranach */
+    gap: 30px;
 }
 
 .profile-pic {
@@ -32,325 +56,334 @@ header {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    background-color: #ddd; /* Kolor zastępczy jeśli nie ma zdjęcia */
-}
-.header-content{
-  margin-left: 100px;
+    background-color: #ddd;
+    border: 4px solid #fff; /* Opcjonalne: biała obwódka */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.header-content h1{
+.header-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.header-content h1 {
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-align: center;
+    margin-bottom: 5px;
 }
 
-.header-content h2{
+.header-content h2 {
     font-size: 18px;
     text-transform: uppercase;
-    text-align: center;
-}
-.header-content p{
-    font-size: 14px;
-    text-align: left;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-.contact-section{
-    display: flex;             /* Ustawia elementy w rzędzie */
-    align-items: flex-start;   /* Wyrównuje elementy do góry */
-    justify-content: right;
-    /* margin-right: 20px; */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-
-.contact-item {
-  text-align: center;
-  flex: 1;
-  max-width: 200px;
-}
-
-.contact-item a, 
-.contact-item p {
-    text-decoration: none;
-    color: #0077b5; /* Kolor linku (np. niebieski LinkedIn) */
+.contact-item a {
+    color: var(--link-color);
     font-weight: bold;
     font-size: 14px;
-    display: block; /* Ważne, aby linki łatwo się klikało */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .contact-item a:hover {
     text-decoration: underline;
 }
 
-.summary p{
-  margin-right: 50px;
+.summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* Lekkie wyróżnienie tła */
+    border-radius: 8px;
 }
 
-.main_content {
-    margin: 0 auto;
-    max-width: 1000px;
+.summary p {
+    text-align: justify;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 40px 0;
+}
+
+/* --- GŁÓWNA ZAWARTOŚĆ (Układ 2 kolumn) --- */
+.main-content {
     display: flex;
-    justify-content: space-between; /* Rozsuwa kolumny na boki */
-    align-items: flex-start;        /* WAŻNE: Zapobiega rozciąganiu wysokości kolumn */
-    padding: 0 40px;                /* Wyrównanie do paddingu kontenera */
-    gap: 40px;                      /* Odstęp między kolumnami */
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
 }
-
 
 .left-column {
-    flex: 0 0 60%;     /* Zarezerwuj sztywno 60% szerokości */
-    max-width: 60%;    /* Nie pozwól przekroczyć tej szerokości */
+    flex: 3; /* Zajmuje więcej miejsca */
 }
 
 .right-column {
-    flex: 0 0 35%;     /* Zarezerwuj sztywno 35% szerokości */
-    max-width: 35%;    /* Nie pozwól przekroczyć tej szerokości */
+    flex: 1.5; /* Zajmuje mniej miejsca */
 }
 
+/* Tytuły sekcji */
 .section-title-center {
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 25px;
-    color: #2c2c2c;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    white-space: nowrap;
 }
 
 .section-title-center::before,
 .section-title-center::after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid #000000;
+    border-bottom: 2px solid var(--text-color);
 }
 
-.section-title-center::before {
-    margin-right: 15px;
-}
+.section-title-center::before { margin-right: 15px; }
+.section-title-center::after { margin-left: 15px; }
 
-.section-title-center::after {
-    margin-left: 15px;
-}
-
-/* Styl nagłówka bocznego z pionową kreską */
 .section-title-side {
     text-transform: uppercase;
-    font-weight: bold;
-    color: #2c2c2c;
-    border-left: 4px solid #c87f56; /* Brązowy akcent */
-    padding-left: 10px;
-    margin-bottom: 20px;
+    font-weight: 800;
+    color: var(--text-color);
+    border-left: 5px solid var(--side-border-color);
+    padding-left: 15px;
+    margin: 30px 0 20px 0;
     letter-spacing: 1px;
 }
+.section-title-side:first-child { margin-top: 0; }
 
-
+/* Doświadczenie */
 .job-entry {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .job-title {
     font-size: 16px;
     font-weight: bold;
-    color: #2c2c2c;
+    color: var(--text-color);
 }
 
 .company-name {
-    color: #0073b1;
+    color: var(--accent-color);
 }
 
 .date-range {
-    display: block;
     font-size: 13px;
-    color: #777;
-    margin-bottom: 8px;
+    color: var(--date-color);
+    font-weight: 600;
 }
 
 ul {
-    list-style-position: inside;
-    padding-left: 5px;
+    list-style-position: outside;
+    padding-left: 20px;
 }
 
 ul li {
     font-size: 14px;
-    margin-bottom: 6px;
-    color: #2c2c2c;
+    margin-bottom: 8px;
+    color: #444;
 }
 
-/* --- ELEMENTY BOCZNE (RIGHT COLUMN) --- */
-.education-entry, .honors-entry {
-    margin-bottom: 20px;
+/* Edukacja i Umiejętności */
+.education-entry {
+    margin-bottom: 25px;
 }
 
 .school-name {
-    color: #0073b1;
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 15px;
 }
 
 .location {
     font-size: 13px;
-    color: #777;
-    margin-bottom: 5px;
+    color: var(--date-color);
+    margin-bottom: 10px;
 }
 
-.degree-list li, .honors-list li {
-    list-style-type: disc;
+.degree-label {
+    font-weight: bold;
     font-size: 13px;
     margin-bottom: 5px;
-    margin-left: 15px;
 }
 
-/* --- UMIEJĘTNOŚCI (SKILLS) --- */
 .skill-item {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    background: rgba(255,255,255,0.5);
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
 .skill-name {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 13px;
     display: block;
 }
 
-.skill-bar-bg {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    padding: 2px;
+/* --- PROJEKTY --- */
+.project-content {
+    margin-top: 60px;
 }
 
-.skill-level {
-    background-color: #e8dcc6; /* Kolor beżowy z obrazka */
-    color: #2c2c2c;
-    font-size: 12px;
-    padding: 2px 5px;
-    width: 100%; /* Tutaj ustawiasz długość paska */
-    display: inline-block;
-}
-
-
-
-
-.project_separator-header {
-    display: flex;             /* Ustawia elementy (linie i tekst) w jednym rzędzie */
-    align-items: center;       /* Wyrównuje linię idealnie do środka wysokości tekstu */
+.project-separator-header, 
+.project-separator-between {
+    display: flex;
+    align-items: center;
     text-align: center;
-    width: 100%;               /* Zajmuje całą szerokość kontenera */
-    
-    /* Styl tekstu */
-    font-weight: bold;
+    width: 100%;
+    font-weight: 800;
     text-transform: uppercase;
-    color: #000000;               /* Ciemny szary kolor tekstu */
-    letter-spacing: 1px;       /* Lekki odstęp między literami */
+    color: var(--text-color);
+    letter-spacing: 1px;
+    margin: 40px 0;
 }
 
-/* To tworzy lewą i prawą linię */
-.project_separator-header::before,
-.project_separator-header::after {
-    content: '';               /* Wymagane, aby element istniał */
-    flex: 1;                   /* Sprawia, że linie zajmują całe wolne miejsce */
-    border-bottom: 1px solid #ccc; /* Linia: 1px grubości, ciągła, szara */
-    /* Jeśli wolisz przerywaną linię jak w pytaniu, użyj: 1px dashed #ccc */
+.project-separator-header::before,
+.project-separator-header::after,
+.project-separator-between::before,
+.project-separator-between::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Odstępy między tekstem a liniami */
-.project_separator-header::before {
-    margin-right: 15px;
+.project-separator-header::before, .project-separator-between::before { margin-right: 20px; }
+.project-separator-header::after, .project-separator-between::after { margin-left: 20px; }
+
+/* Wiersz projektu */
+.project-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
 }
 
-.project_separator-header::after {
-    margin-left: 15px;
+.project-info {
+    flex: 1;
 }
 
-
-.project_content {
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 0 40px; /* Żeby tekst nie dotykał krawędzi ekranu */
-}
-.project_row {
-    display: flex;          /* Ustawia dzieci obok siebie */
-    gap: 30px;              /* Odstęp między kolumnami */
-    align-items: center; /* Zapobiega rozciąganiu wysokości */
+.project-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.project_left_col {
-    flex: 1;                 /* Zajmuje 1 część dostępnego miejsca (50%) */
-    /* Jeśli chcesz, by lewa była szersza, np. daj tu flex: 2; a prawej flex: 1; */
-}
-
-.project_right_col {
-    flex: 1;                 /* Zajmuje 1 część dostępnego miejsca (50%) */
-}
-
-
-.project_separator-between {
-    display: flex;             /* Ustawia elementy (linie i tekst) w jednym rzędzie */
-    align-items: center;       /* Wyrównuje linię idealnie do środka wysokości tekstu */
-    text-align: center;
-    width: 100%;               /* Zajmuje całą szerokość kontenera */           /* Odstępy z góry i z dołu */
-    
-    /* Styl tekstu */
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #000000;               /* Ciemny szary kolor tekstu */
-    letter-spacing: 1px;       /* Lekki odstęp między literami */
-}
-.project_separator-between::before,
-.project_separator-between::after {
-    content: '';               /* Wymagane, aby element istniał */
-    flex: 1;                   /* Sprawia, że linie zajmują całe wolne miejsce */
-    border-bottom: 1px solid #ccc; /* Linia: 1px grubości, ciągła, szara */
-    /* Jeśli wolisz przerywaną linię jak w pytaniu, użyj: 1px dashed #ccc */
-}
-
-.project_content h2{
-    color: #0073b1;
+.project-info h2 {
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
+    margin-bottom: 15px;
 }
 
-.project_content h3{
+.project-info p {
+    font-size: 14px;
+    text-align: justify;
+}
 
+.project-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto; /* Kluczowe dla zachowania proporcji */
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Grid dla mniejszych projektów na dole */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.project-card h2 {
+    font-size: 16px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+.project-card p {
     font-size: 13px;
-    text-align: left;
-}
-
-.project_picture{
-    width: 455px;
-    height: 300px;
-    justify-content: center;
-    border-radius: 5%;
-    object-fit: cover;
-    background-color: #ddd;
 }
 
 
-.project_picture_cyberlej{
-    width: 400px;
-    height: 400px;
-    border-radius: 5%;
-    object-fit: cover;
-    background-color: #ddd;
-}
+/* --- RESPONSIVENESS (MOBILE) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
 
-.project_picture_analysis{
-    width: 400px;
-    height: 300px;
-    border-radius: 5%;
-    object-fit: cover;
-    background-color: #ddd;
-}
+    /* Header */
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .header-content {
+        margin-left: 0;
+    }
 
-.cyber_row {
-    display: flex;          /* Ustawia dzieci obok siebie */
-    gap: 30px;              /* Odstęp między kolumnami */
-    align-items: flex-start; /* Zapobiega rozciąganiu wysokości */
-}
+    .contact-section {
+        align-items: center; /* Wyśrodkowanie linków */
+    }
 
-.cyber_left {
-  flex: 1;
-}
-.cyber_right{
-  flex: 1;
+    /* Główny układ - jedna kolumna */
+    .main-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-column, .right-column {
+        flex: auto;
+        max-width: 100%;
+    }
+
+    /* Projekty */
+    .project-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Na mobile obrazek zawsze pod tekstem lub nad tekstem - zależy od preferencji.
+       Tutaj standardowy flow: Najpierw tytuł/opis, potem zdjęcie */
+    .project-visual {
+        order: -1; /* Jeśli chcesz zdjęcie NAD opisem na telefonie, odkomentuj to */
+        width: 100%;
+    }
+    
+    .project-img {
+        max-width: 100%; /* Pełna szerokość na mobile */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Jedna kolumna dla małych projektów */
+    }
 }

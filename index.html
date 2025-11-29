@@ -1,112 +1,117 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bartlomiej Jedrusik</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class = "container">
-            <header>
-                <img src="img/me.png" alt="Profile Picture" class="profile-pic">
-            <div class = header-content>
-                <h1>Bartłomiej Jędrusik</h1>
-                <h2>Embedded Engineer</h2>
-                <div class = contact-section>
-                    <div class="contact-item">
-                        <a href="mailto:bartekjedr@gmail.com">
-                            <i class="fa-solid fa-envelope"></i> bartekjedr@gmail.com
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <a href="https://www.linkedin.com/in/bjedr" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/bjedr
-                        </a>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bartłomiej Jędrusik - Embedded Engineer</title>
+    <meta name="description" content="Portfolio i CV Bartłomieja Jędrusika">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <div class="header-inner">
+                <img src="img/me.png" alt="Bartłomiej Jędrusik" class="profile-pic">
+                <div class="header-content">
+                    <h1>Bartłomiej Jędrusik</h1>
+                    <h2>Embedded Engineer</h2>
+                    
+                    <div class="contact-section">
+                        <div class="contact-item">
+                            <a href="mailto:bartekjedr@gmail.com">
+                                <i class="fa-solid fa-envelope"></i> bartekjedr@gmail.com
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://www.linkedin.com/in/bjedr" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i> linkedin.com/in/bjedr
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            </header>   
 
-            <div class= summary>
-                    <p>  Recent Master’s and Bachelor’s graduate
-                    in Electronics Engineering with a passion
-                    for embedded systems and low-level
-                    programming. Former President of the
-                    SKN MOS Scientific Club, combining
-                    strong technical expertise with proven
-                    leadership and teamwork abilities.
-                    Experienced in PCB design, EMC testing,
-                    and hardware debugging, with hands-on
-                    experience in 5G RAN systems. Dedicated
-                    to solving complex technical problems
-                    and delivering innovative solutions.</p>
+            <div class="summary">
+                <p>
+                    Recent Master’s and Bachelor’s graduate in Electronics Engineering with a passion for embedded systems and low-level programming. 
+                    Former President of the SKN MOS Scientific Club, combining strong technical expertise with proven leadership and teamwork abilities. 
+                    Experienced in PCB design, EMC testing, and hardware debugging, with hands-on experience in 5G RAN systems. 
+                    Dedicated to solving complex technical problems and delivering innovative solutions.
+                </p>
             </div>
-        </div>
-        <div class = main_content>
+        </header>   
+
+        <hr class="divider">
+
+        <div class="main-content">
             <div class="left-column">
                 <h3 class="section-title-center">Work Experience</h3>
 
                 <div class="job-entry">
-                    <div class="job-title">Hardware Engineer at <span class="company-name">Viessmann R&D center</span></div>
-                    <span class="date-range">2021 - 2023</span>
+                    <div class="job-header">
+                        <div class="job-title">Hardware Engineer at <span class="company-name">Viessmann R&D center</span></div>
+                        <span class="date-range">2021 - 2023</span>
+                    </div>
                     <ul>
                         <li>Designed (PCB) hardware test fixtures to facilitate automated software testing and validation phases.</li>
                         <li>Conducted EMC testing and root cause analysis, implementing hardware modifications to improve noise immunity and reduce emissions.</li>
                         <li>Analyzed and validated DC/DC converters to verify power integrity and compliance with design specifications.</li>
-                        <li>Validated and debugged low-level communication protocols (I2C, SPI, UART, CAN, USB) using logic analyzers and oscilloscopes to ensure data integrity.</li>
+                        <li>Validated and debugged low-level communication protocols (I2C, SPI, UART, CAN, USB) using logic analyzers and oscilloscopes.</li>
                     </ul>
                 </div>
 
                 <div class="job-entry">
-                    <div class="job-title">Software Engineer at <span class="company-name">GlobalLogic</span></div>
-                    <span class="date-range">2025 - 2025</span>
+                    <div class="job-header">
+                        <div class="job-title">Software Engineer at <span class="company-name">GlobalLogic</span></div>
+                        <span class="date-range">2025 - 2025</span>
+                    </div>
                     <ul>
                         <li>Orchestrated the development of the Random Access (RACH) procedure for 5G RAN, leading a team through coding and verification phases.</li>
                         <li>Validated the software solution via extensive simulations and successfully integrated the stack on live hardware, verifying real-time performance.</li>
                     </ul>
                 </div>
             </div>
+
             <div class="right-column">
                 
                 <h3 class="section-title-side">Education</h3>
                 
                 <div class="education-entry">
-                    <div class="school-name">Wrocław Univeristy of Technology</div>
+                    <div class="school-name">Wrocław University of Technology</div>
                     <div class="location">Wrocław, Poland</div>
                     
-                    <div style="margin-top: 10px; font-weight: bold; font-size: 14px;">Degrees</div>
-                    <ul class="degree-list" style="padding-left: 0; list-style-position: inside;">
+                    <div class="degree-label">Degrees</div>
+                    <ul class="degree-list">
                         <li>Bachelor's degree in Electronics</li>
                         <li>Master's degree in Electronics</li>
                     </ul>
                 </div>
 
-                <h3 class="section-title-side" style="margin-top: 20px;">Skills</h3>
-                
+                <h3 class="section-title-side">Skills</h3>
                 <div class="skill-item">
                     <span class="skill-name">C, C++, Linux, Python, DSP, LVGL</span>
                 </div>
-
                 <div class="skill-item">
                     <span class="skill-name">SQL, QT, Matlab, VHDL, FreeRTOS</span>
                 </div>
                 
-                <h3 class="section-title-side" style="margin-top: 20px;">Tools</h3>
+                <h3 class="section-title-side">Tools</h3>
                 <div class="skill-item">
                     <span class="skill-name">git, CMake, Makefile, Docker, JLink</span>
                 </div>
                 <div class="skill-item">
                     <span class="skill-name">VSCode, LTSpice, Altium, KiCad</span>
                 </div>
-                <h3 class="section-title-side" style="margin-top: 20px;">Interfaces</h3>
+
+                <h3 class="section-title-side">Interfaces</h3>
                 <div class="skill-item">
                     <span class="skill-name">CAN, UART, SPI/QSPI, I2S</span>
                 </div>
@@ -116,80 +121,83 @@
             </div>
         </div>
         
-        <div class = project_content>
-            <h3 class="project_separator-header">Projects</h3>
-            <div class = project_row>
-                <div class = project_left_col>
+        <div class="project-content">
+            <h3 class="project-separator-header">Projects</h3>
+            
+            <div class="project-row">
+                <div class="project-info">
                     <h2>1kW BLDC Motor Driver</h2>
                     <p>Designed and prototyped a high-power custom PCB for a 1kW Brushless DC motor driver, utilizing the STM32G4 microcontroller for its advanced mixed-signal capabilities. Engineered the complete firmware architecture in Embedded C, implementing a Six-Step (Trapezoidal) commutation algorithm and a PID controller for precise closed-loop speed regulation. To ensure hardware safety and longevity, developed a software-based Soft-Start mechanism to mitigate inrush currents. The project is currently in the active development phase, with ongoing work focused on refactoring the control scheme to implement Field Oriented Control (FOC) for enhanced efficiency and acoustic performance.</p>
                 </div>
-                <div class = project_right_col>
-                    <img src="img/bldc_motor.png" alt="Profile Picture" class="project_picture">
+                <div class="project-visual">
+                    <img src="img/bldc_motor.png" alt="BLDC Motor Driver" class="project-img">
                 </div>
             </div>
-            <h3 class="project_separator-between"></h3>
-            <div class = project_row>
-                <div class = project_left_col>
+            
+            <div class="project-separator-between"></div>
+
+            <div class="project-row reverse-mobile">
+                <div class="project-info">
                     <h2>Line Follower</h2>
                     <p>Designed and engineered a fully autonomous Line Follower robot from the ground up as a Bachelor's Thesis project. The system architecture is based on the ESP32S3 microcontroller, running firmware developed in C++ on top of FreeRTOS to ensure real-time task management between motor control and wireless communication. The robot’s position is calculated using a custom reflective sensor array on the front bumper, feeding into a PID controller for precise trajectory correction. To solve the common challenge of manual tuning, I developed a companion desktop application in Python that communicates with the robot via a REST API. This allowed for real-time remote adjustment of PID coefficients without recompiling code. The development environment and tooling were containerized using Docker to ensure reproducibility and workflow efficiency.</p>
                 </div>
-                <div class = project_right_col>
-                    <img src="img/Line_follower.png" alt="Profile Picture" class="project_picture">
+                <div class="project-visual">
+                    <img src="img/Line_follower.png" alt="Line Follower" class="project-img">
                 </div>
             </div>
-            <h3 class="project_separator-between"></h3>
-            <div class = project_row>
-                <div class = project_left_col>
-                    <h2>CyberLej: Competetive Timing system</h2>
+
+            <div class="project-separator-between"></div>
+
+            <div class="project-row">
+                <div class="project-info">
+                    <h2>CyberLej: Competitive Timing system</h2>
                     <p>Executed the full-stack engineering of a standalone embedded device used for competitive social events. The project involved designing a custom PCB with the ESP32S3 microcontroller and integrating a suite of peripherals including a Touch Display, Audio Codec, and SD storage. To ensure the user interface was fluid and the audio lag-free, I wrote optimized low-level drivers from scratch, managing hardware registers directly rather than relying on heavy high-level APIs.</p>
                 </div>
-                <div class = project_right_col>
-                    <img src="img/cyberlej_2.png" alt="Profile Picture" class="project_picture_cyberlej">
+                <div class="project-visual">
+                    <img src="img/cyberlej_2.png" alt="CyberLej System" class="project-img">
                 </div>
             </div>
-            <h3 class="project_separator-between"></h3>
-            <div class = project_row>
-                <div class = project_left_col>
-                    <h2>Analysis of the impact of electromagnetic interference on latencies and link stability of wireless communication interfaces. </h2>
-                    <p>Designed and engineered a custom hardware-software testbench to evaluate the stability and latency of wireless protocols (Wi-Fi, BLE, ZigBee) under electromagnetic interference. I developed a dedicated transceiver based on the ESP32-C6 (RISC-V) SoC to support multiple standards on a unified hardware platform and implemented an industrial RS-485 interface for reliable control communication. The project involved writing optimized C++ firmware for real-time metric collection and creating a Python desktop application to automate test scenarios and visualize data. My research proved the superior robustness of Bluetooth Low Energy in high-interference environments due to its Adaptive Frequency Hopping mechanism, while identifying critical retransmission latency issues in Wi-Fi TCP</p>
+
+            <div class="project-separator-between"></div>
+
+            <div class="project-row reverse-mobile">
+                <div class="project-info">
+                    <h2>Analysis of EMI impact on wireless links</h2>
+                    <p>Designed and engineered a custom hardware-software testbench to evaluate the stability and latency of wireless protocols (Wi-Fi, BLE, ZigBee) under electromagnetic interference. I developed a dedicated transceiver based on the ESP32-C6 (RISC-V) SoC to support multiple standards on a unified hardware platform and implemented an industrial RS-485 interface for reliable control communication. The project involved writing optimized C++ firmware for real-time metric collection and creating a Python desktop application to automate test scenarios and visualize data. My research proved the superior robustness of Bluetooth Low Energy in high-interference environments due to its Adaptive Frequency Hopping mechanism, while identifying critical retransmission latency issues in Wi-Fi TCP.</p>
                 </div>
-                <div class = project_right_col>
-                    <img src="img/zaklocenie_wiele.png" alt="Profile Picture" class="project_picture_analysis">
+                <div class="project-visual">
+                    <img src="img/zaklocenie_wiele.png" alt="EMI Analysis Setup" class="project-img">
                 </div>
             </div>
-            <h3 class="project_separator-between"></h3>
-            <div class = project_row>
-                <div class = project_left_col>
+
+            <div class="project-separator-between"></div>
+
+            <div class="project-row">
+                <div class="project-info">
                     <h2>Big Binary Clock</h2>
                     <p>Developed a modernized hardware and software prototype to upgrade the iconic large-scale Binary Clock on the C-13 building at Wrocław University of Science and Technology. The system controls a massive display of 17 LED strips using a custom-designed controller running FreeRTOS. I engineered a robust time synchronization engine that fuses data from NTP (Network Time Protocol) and GPS to ensure millisecond-level precision and redundancy. A significant portion of the project involved developing a custom desktop control station using Qt (C++). This application communicates with the hardware via TCP using the LwIP stack, enabling granular control over every LED segment and facilitating remote firmware updates (OTA). The entire build environment was containerized with Docker and managed via CMake/Makefiles to ensure professional-grade code maintainability.</p>
                 </div>
-                <div class = project_right_col>
-                    <img src="img/Bbc.png" alt="Profile Picture" class="project_picture_analysis">
+                <div class="project-visual">
+                    <img src="img/Bbc.png" alt="Binary Clock" class="project-img">
                 </div>
             </div>
-            <h3 class="project_separator-between"></h3>
-            <div class = project_row>
-                <div class = project_left_col>
+            <div class="project-separator-between"></div>
+            <div class="project-grid">
+                <div class="project-card">
                     <h2>Pulseoximeter</h2>
                 </div>
-                <div class = project_right_col>
+                <div class="project-card">
                     <h2>Mini-Keyboard</h2>
                 </div>
-            </div>
-            <h3 class="project_separator-between"></h3>
-            <div class = project_row>
-                <div class = project_left_col>
+                <div class="project-card">
                     <h2>8-bit RISC microprocessor</h2>
                 </div>
-                <div class = project_right_col>
+                <div class="project-card">
                     <h2>System for reflex testing using FPGA</h2>
                 </div>
-            </div>
-            <h3 class="project_separator-between"></h3>
-            <div class = project_row>
-                <div class = project_left_col>
+                <div class="project-card">
                     <h2>CNN model for skin lesion detection</h2>
                 </div>
             </div>
-        </div>
-    </body>
+        </div> </div> </body>
+</html>
