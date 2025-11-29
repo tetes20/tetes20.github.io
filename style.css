@@ -270,7 +270,7 @@ ul li {
 .project_row {
     display: flex;          /* Ustawia dzieci obok siebie */
     gap: 30px;              /* Odstęp między kolumnami */
-    align-items: flex-start; /* Zapobiega rozciąganiu wysokości */
+    align-items: center; /* Zapobiega rozciąganiu wysokości */
 }
 
 .project_left_col {
@@ -310,9 +310,16 @@ ul li {
     text-align: center;
 }
 
+.project_content h3{
+
+    font-size: 13px;
+    text-align: left;
+}
+
 .project_picture{
     width: 455px;
     height: 300px;
+    justify-content: center;
     border-radius: 5%;
     object-fit: cover;
     background-color: #ddd;

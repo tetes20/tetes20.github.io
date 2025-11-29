@@ -121,6 +121,7 @@
             <div class = project_row>
                 <div class = project_left_col>
                     <h2>1kW BLDC Motor Driver</h2>
+                    <p>Designed and prototyped a high-power custom PCB for a 1kW Brushless DC motor driver, utilizing the STM32G4 microcontroller for its advanced mixed-signal capabilities. Engineered the complete firmware architecture in Embedded C, implementing a Six-Step (Trapezoidal) commutation algorithm and a PID controller for precise closed-loop speed regulation. To ensure hardware safety and longevity, developed a software-based Soft-Start mechanism to mitigate inrush currents. The project is currently in the active development phase, with ongoing work focused on refactoring the control scheme to implement Field Oriented Control (FOC) for enhanced efficiency and acoustic performance.</p>
                 </div>
                 <div class = project_right_col>
                     <img src="img/bldc_motor.png" alt="Profile Picture" class="project_picture">
@@ -130,6 +131,7 @@
             <div class = project_row>
                 <div class = project_left_col>
                     <h2>Line Follower</h2>
+                    <p>Designed and engineered a fully autonomous Line Follower robot from the ground up as a Bachelor's Thesis project. The system architecture is based on the ESP32S3 microcontroller, running firmware developed in C++ on top of FreeRTOS to ensure real-time task management between motor control and wireless communication. The robot’s position is calculated using a custom reflective sensor array on the front bumper, feeding into a PID controller for precise trajectory correction. To solve the common challenge of manual tuning, I developed a companion desktop application in Python that communicates with the robot via a REST API. This allowed for real-time remote adjustment of PID coefficients without recompiling code. The development environment and tooling were containerized using Docker to ensure reproducibility and workflow efficiency.</p>
                 </div>
                 <div class = project_right_col>
                     <img src="img/Line_follower.png" alt="Profile Picture" class="project_picture">
@@ -138,7 +140,8 @@
             <h3 class="project_separator-between"></h3>
             <div class = project_row>
                 <div class = project_left_col>
-                    <h2>CyberLej</h2>
+                    <h2>CyberLej: Competetive Timing system</h2>
+                    <p>Executed the full-stack engineering of a standalone embedded device used for competitive social events. The project involved designing a custom PCB with the ESP32S3 microcontroller and integrating a suite of peripherals including a Touch Display, Audio Codec, and SD storage. To ensure the user interface was fluid and the audio lag-free, I wrote optimized low-level drivers from scratch, managing hardware registers directly rather than relying on heavy high-level APIs.</p>
                 </div>
                 <div class = project_right_col>
                     <img src="img/cyberlej_2.png" alt="Profile Picture" class="project_picture_cyberlej">
@@ -148,6 +151,7 @@
             <div class = project_row>
                 <div class = project_left_col>
                     <h2>Analysis of the impact of electromagnetic interference on latencies and link stability of wireless communication interfaces. </h2>
+                    <p>Designed and engineered a custom hardware-software testbench to evaluate the stability and latency of wireless protocols (Wi-Fi, BLE, ZigBee) under electromagnetic interference. I developed a dedicated transceiver based on the ESP32-C6 (RISC-V) SoC to support multiple standards on a unified hardware platform and implemented an industrial RS-485 interface for reliable control communication. The project involved writing optimized C++ firmware for real-time metric collection and creating a Python desktop application to automate test scenarios and visualize data. My research proved the superior robustness of Bluetooth Low Energy in high-interference environments due to its Adaptive Frequency Hopping mechanism, while identifying critical retransmission latency issues in Wi-Fi TCP</p>
                 </div>
                 <div class = project_right_col>
                     <img src="img/zaklocenie_wiele.png" alt="Profile Picture" class="project_picture_analysis">
@@ -157,6 +161,7 @@
             <div class = project_row>
                 <div class = project_left_col>
                     <h2>Big Binary Clock</h2>
+                    <p>Developed a modernized hardware and software prototype to upgrade the iconic large-scale Binary Clock on the C-13 building at Wrocław University of Science and Technology. The system controls a massive display of 17 LED strips using a custom-designed controller running FreeRTOS. I engineered a robust time synchronization engine that fuses data from NTP (Network Time Protocol) and GPS to ensure millisecond-level precision and redundancy. A significant portion of the project involved developing a custom desktop control station using Qt (C++). This application communicates with the hardware via TCP using the LwIP stack, enabling granular control over every LED segment and facilitating remote firmware updates (OTA). The entire build environment was containerized with Docker and managed via CMake/Makefiles to ensure professional-grade code maintainability.</p>
                 </div>
                 <div class = project_right_col>
                     <img src="img/Bbc.png" alt="Profile Picture" class="project_picture_analysis">
