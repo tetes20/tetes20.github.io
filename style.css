@@ -1,0 +1,349 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*font-family: 'M*/
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e0dfdf;
+    color: #2c2c2c;
+    line-height: 1.6;
+    padding: 40px;
+}
+
+
+
+.container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #e0dfdf;
+            padding: 40px;
+        }
+
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ddd; /* Kolor zastępczy jeśli nie ma zdjęcia */
+}
+.header-content{
+  margin-left: 100px;
+}
+
+.header-content h1{
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.header-content h2{
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.header-content p{
+    font-size: 14px;
+    text-align: left;
+}
+
+.contact-section{
+    display: flex;             /* Ustawia elementy w rzędzie */
+    align-items: flex-start;   /* Wyrównuje elementy do góry */
+    justify-content: right;
+    /* margin-right: 20px; */
+}
+
+
+.contact-item {
+  text-align: center;
+  flex: 1;
+  max-width: 200px;
+}
+
+.contact-item a, 
+.contact-item p {
+    text-decoration: none;
+    color: #0077b5; /* Kolor linku (np. niebieski LinkedIn) */
+    font-weight: bold;
+    font-size: 14px;
+    display: block; /* Ważne, aby linki łatwo się klikało */
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.summary p{
+  margin-right: 50px;
+}
+
+.main_content {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between; /* Rozsuwa kolumny na boki */
+    align-items: flex-start;        /* WAŻNE: Zapobiega rozciąganiu wysokości kolumn */
+    padding: 0 40px;                /* Wyrównanie do paddingu kontenera */
+    gap: 40px;                      /* Odstęp między kolumnami */
+}
+
+
+.left-column {
+    flex: 0 0 60%;     /* Zarezerwuj sztywno 60% szerokości */
+    max-width: 60%;    /* Nie pozwól przekroczyć tej szerokości */
+}
+
+.right-column {
+    flex: 0 0 35%;     /* Zarezerwuj sztywno 35% szerokości */
+    max-width: 35%;    /* Nie pozwól przekroczyć tej szerokości */
+}
+
+.section-title-center {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #2c2c2c;
+}
+
+.section-title-center::before,
+.section-title-center::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000000;
+}
+
+.section-title-center::before {
+    margin-right: 15px;
+}
+
+.section-title-center::after {
+    margin-left: 15px;
+}
+
+/* Styl nagłówka bocznego z pionową kreską */
+.section-title-side {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #2c2c2c;
+    border-left: 4px solid #c87f56; /* Brązowy akcent */
+    padding-left: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+
+.job-entry {
+    margin-bottom: 30px;
+}
+
+.job-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c2c2c;
+}
+
+.company-name {
+    color: #0073b1;
+}
+
+.date-range {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 5px;
+}
+
+ul li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #2c2c2c;
+}
+
+/* --- ELEMENTY BOCZNE (RIGHT COLUMN) --- */
+.education-entry, .honors-entry {
+    margin-bottom: 20px;
+}
+
+.school-name {
+    color: #0073b1;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.location {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.degree-list li, .honors-list li {
+    list-style-type: disc;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+/* --- UMIEJĘTNOŚCI (SKILLS) --- */
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.skill-bar-bg {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+
+.skill-level {
+    background-color: #e8dcc6; /* Kolor beżowy z obrazka */
+    color: #2c2c2c;
+    font-size: 12px;
+    padding: 2px 5px;
+    width: 100%; /* Tutaj ustawiasz długość paska */
+    display: inline-block;
+}
+
+
+
+
+.project_separator-header {
+    display: flex;             /* Ustawia elementy (linie i tekst) w jednym rzędzie */
+    align-items: center;       /* Wyrównuje linię idealnie do środka wysokości tekstu */
+    text-align: center;
+    width: 100%;               /* Zajmuje całą szerokość kontenera */
+    
+    /* Styl tekstu */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;               /* Ciemny szary kolor tekstu */
+    letter-spacing: 1px;       /* Lekki odstęp między literami */
+}
+
+/* To tworzy lewą i prawą linię */
+.project_separator-header::before,
+.project_separator-header::after {
+    content: '';               /* Wymagane, aby element istniał */
+    flex: 1;                   /* Sprawia, że linie zajmują całe wolne miejsce */
+    border-bottom: 1px solid #ccc; /* Linia: 1px grubości, ciągła, szara */
+    /* Jeśli wolisz przerywaną linię jak w pytaniu, użyj: 1px dashed #ccc */
+}
+
+/* Odstępy między tekstem a liniami */
+.project_separator-header::before {
+    margin-right: 15px;
+}
+
+.project_separator-header::after {
+    margin-left: 15px;
+}
+
+
+.project_content {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 40px; /* Żeby tekst nie dotykał krawędzi ekranu */
+}
+.project_row {
+    display: flex;          /* Ustawia dzieci obok siebie */
+    gap: 30px;              /* Odstęp między kolumnami */
+    align-items: flex-start; /* Zapobiega rozciąganiu wysokości */
+}
+
+.project_left_col {
+    flex: 1;                 /* Zajmuje 1 część dostępnego miejsca (50%) */
+    /* Jeśli chcesz, by lewa była szersza, np. daj tu flex: 2; a prawej flex: 1; */
+}
+
+.project_right_col {
+    flex: 1;                 /* Zajmuje 1 część dostępnego miejsca (50%) */
+}
+
+
+.project_separator-between {
+    display: flex;             /* Ustawia elementy (linie i tekst) w jednym rzędzie */
+    align-items: center;       /* Wyrównuje linię idealnie do środka wysokości tekstu */
+    text-align: center;
+    width: 100%;               /* Zajmuje całą szerokość kontenera */           /* Odstępy z góry i z dołu */
+    
+    /* Styl tekstu */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;               /* Ciemny szary kolor tekstu */
+    letter-spacing: 1px;       /* Lekki odstęp między literami */
+}
+.project_separator-between::before,
+.project_separator-between::after {
+    content: '';               /* Wymagane, aby element istniał */
+    flex: 1;                   /* Sprawia, że linie zajmują całe wolne miejsce */
+    border-bottom: 1px solid #ccc; /* Linia: 1px grubości, ciągła, szara */
+    /* Jeśli wolisz przerywaną linię jak w pytaniu, użyj: 1px dashed #ccc */
+}
+
+.project_content h2{
+    color: #0073b1;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.project_picture{
+    width: 455px;
+    height: 300px;
+    border-radius: 5%;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+
+.project_picture_cyberlej{
+    width: 400px;
+    height: 200px;
+    border-radius: 5%;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.project_picture_analysis{
+    width: 500px;
+    height: 300px;
+    border-radius: 5%;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.cyber_row {
+    display: flex;          /* Ustawia dzieci obok siebie */
+    gap: 30px;              /* Odstęp między kolumnami */
+    align-items: flex-start; /* Zapobiega rozciąganiu wysokości */
+}
+
+.cyber_left {
+  flex: 1;
+}
+.cyber_right{
+  flex: 1;
+}
